@@ -69,7 +69,7 @@ function analyzeText() {
 
   if (countCharsWithSpacesCheckbox.checked) {
     const charCount = text.length;
-    charCountWithSpacesElem.textContent = `Количество символов (с пробелами): ${charCount}`;
+    charCountWithSpacesElem.textContent = `Количество символов: ${charCount}`;
   }
 
   if (readingTimeCheckbox.checked) {
@@ -94,7 +94,7 @@ function analyzeText() {
     const minutes = Math.floor(timeInSeconds / 60);
     const seconds = Math.ceil(timeInSeconds % 60);
 
-    let timeString = 'Время для чтения вслух: ';
+    let timeString = 'Время озвучивания текста: ';
     if (minutes > 0) {
       timeString += `${minutes} мин `;
     }
