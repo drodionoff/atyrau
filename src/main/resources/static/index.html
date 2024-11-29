@@ -21,10 +21,52 @@
         placeholder="Введите текст здесь..."
       ></textarea>
 
+      <!-- Опции анализа -->
+      <div class="labels-container">
+        <label class="label">
+          <input type="checkbox" id="countWords" checked />
+          Количество слов
+        </label>
+        <label class="label">
+          <input type="checkbox" id="countCharsWithSpaces" checked />
+          Количество символов
+        </label>
+        <div class="container-time">
+          <label class="label">
+            <input type="checkbox" id="readingTime" checked />
+            Время озвучивания текста
+          </label>
+          <div class="container-radio">
+            <label class="radio-label">
+              <input type="radio" name="readingSpeed" value="slow" />
+              Размеренно
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="readingSpeed" value="normal" checked />
+              Нормально
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="readingSpeed" value="fast" />
+              Быстро
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Кнопки -->
+      <div class="buttons-container">
+        <button class="button analyze-button" type="submit" disabled>
+          Проанализировать
+        </button>
+        <button class="button clear-button hidden">Очистить</button>
+      </div>
+
       <!-- Результаты -->
       <div class="result hidden">
         <h2>Результаты анализа</h2>
-        <p class="result__text char-count"></p>
+        <p class="result__text word-count"></p>
+        <p class="result__text char-count-with-spaces"></p>
+        <p class="result__text char-count-without-spaces"></p>
         <p class="result__text reading-time"></p>
       </div>
     </div>
