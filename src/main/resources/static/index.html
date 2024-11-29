@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Анализатор текста" />
+    <title>Текстомер</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="icon" href="./images/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body class="page">
+    <div class="container">
+      <h1 class="title">Текстомер</h1>
+
+      <!-- Форма ввода текста -->
+      <label class="label" for="inputText">Введите текст для анализа:</label>
+      <textarea
+        class="input-text"
+        id="inputText"
+        placeholder="Введите текст здесь..."
+      ></textarea>
+
+      <!-- Опции анализа -->
+      <div class="labels-container">
+        <label class="label">
+          <input type="checkbox" id="countWords" checked />
+          Количество слов
+        </label>
+        <label class="label">
+          <input type="checkbox" id="countCharsWithSpaces" checked />
+          Количество символов
+        </label>
+        <div class="container-time">
+          <label class="label">
+            <input type="checkbox" id="readingTime" checked />
+            Время озвучивания текста
+          </label>
+          <div class="container-radio">
+            <label class="radio-label">
+              <input type="radio" name="readingSpeed" value="slow" />
+              Размеренно
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="readingSpeed" value="normal" checked />
+              Нормально
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="readingSpeed" value="fast" />
+              Быстро
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Кнопки -->
+      <div class="buttons-container">
+        <button class="button analyze-button" type="submit" disabled>
+          Проанализировать
+        </button>
+        <button class="button clear-button hidden">Очистить</button>
+      </div>
+
+      <!-- Результаты -->
+      <div class="result hidden">
+        <h2>Результаты анализа</h2>
+        <p class="result__text word-count"></p>
+        <p class="result__text char-count-with-spaces"></p>
+        <p class="result__text char-count-without-spaces"></p>
+        <p class="result__text reading-time"></p>
+      </div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
