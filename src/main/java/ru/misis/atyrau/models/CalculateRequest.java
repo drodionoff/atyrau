@@ -14,18 +14,18 @@ import java.util.Map;
         "text"
 })
 
-public class CalculateRequest {
+public class CalculateRequest extends AbstractRequestModel {
 
     @JsonProperty("is_need_words")
-    private Boolean isNeedWords;
+    protected Boolean isNeedWords;
     @JsonProperty("is_need_symbols")
-    private Boolean isNeedSymbols;
+    protected Boolean isNeedSymbols;
     @JsonProperty("is_need_reading_time")
-    private Boolean isNeedReadingTime;
+    protected Boolean isNeedReadingTime;
     @JsonProperty("reading_speed")
-    private Integer readingSpeed;
+    protected Integer readingSpeed;
     @JsonProperty("text")
-    private String text;
+    protected String text;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
